@@ -50,49 +50,42 @@ Fixed& Fixed::operator=(const Fixed& other)
 	return *this;
 }
 
-Fixed& Fixed::operator+(const Fixed& other)
-{
-	if (this != &other)
-		_rawBits += other.getRawBits();
-	return *this;
-}
-
-bool Fixed::operator>(const Fixed& other)
+bool Fixed::operator>(const Fixed& other) const
 {
 	if (this != &other)
 		return _rawBits > other.getRawBits();
 	return false;
 }
 
-bool Fixed::operator<(const Fixed& other)
+bool Fixed::operator<(const Fixed& other) const
 {
 	if (this != &other)
 		return _rawBits < other.getRawBits();
 	return false;
 }
 
-bool Fixed::operator>=(const Fixed& other)
+bool Fixed::operator>=(const Fixed& other) const
 {
 	if (this != &other)
 		return _rawBits >= other.getRawBits();
 	return true;
 }
 
-bool Fixed::operator<=(const Fixed& other)
+bool Fixed::operator<=(const Fixed& other) const
 {
 	if (this != &other)
 		return _rawBits <= other.getRawBits();
 	return true;
 }
 
-bool Fixed::operator==(const Fixed& other)
+bool Fixed::operator==(const Fixed& other) const
 {
 	if (this != &other)
 		return _rawBits == other.getRawBits();
 	return true;
 }
 
-bool Fixed::operator!=(const Fixed& other)
+bool Fixed::operator!=(const Fixed& other) const
 {
 	if (this != &other)
 		return _rawBits != other.getRawBits();

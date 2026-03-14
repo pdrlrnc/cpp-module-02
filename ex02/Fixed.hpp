@@ -25,6 +25,8 @@ class Fixed
 		Fixed();
 		~Fixed();
 
+		Fixed& operator=(const Fixed& other);
+
 		bool operator>(const Fixed& other) const;
 		bool operator<(const Fixed& other) const;
 		bool operator>=(const Fixed& other) const;
