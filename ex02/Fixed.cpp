@@ -56,6 +56,7 @@ Fixed& Fixed::operator+(const Fixed& other)
 		_rawBits += other.getRawBits();
 	return *this;
 }
+
 bool Fixed::operator>(const Fixed& other)
 {
 	if (this != &other)
@@ -152,7 +153,7 @@ Fixed Fixed::operator--(int dummy)
 	return aux;
 }
 
-Fixed& Fixed:max(Fixed& first, Fixed& second)
+Fixed& Fixed::max(Fixed& first, Fixed& second)
 {
 	if (first > second)
 		return first;
@@ -166,7 +167,7 @@ const Fixed& Fixed::max(const Fixed& first, const Fixed& second)
 	return second;
 }
 
-Fixed& Fixed:min(Fixed& first, Fixed& second)
+Fixed& Fixed::min(Fixed& first, Fixed& second)
 {
 	if (first < second)
 		return first;
