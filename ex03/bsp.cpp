@@ -30,29 +30,3 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 	return ((aBEdge >= 0 && bCEdge >= 0 && cAEdge >= 0) ||
 			(aBEdge <= 0 && bCEdge <= 0 && cAEdge <= 0));
 }
-
-
-int main(void)
-{
-	Point a = Point(0.0, 0.0);
-	Point b = Point(0.0, 5.0);
-	Point c = Point(2.5, 2.5);
-	
-	Point beloved_point = Point(0.5, 1.0);
-
-	if (bsp(a, b, c, beloved_point))
-		std::cout << "The point is inside the triangle" << std::endl;
-	else
-		std::cout << "The point is NOT inside the triangle" << std::endl;
-
-	beloved_point.addXAndY(10.3, 2.0);
-
-	if (bsp(a, b, c, beloved_point))
-		std::cout << "The point is inside the triangle" << std::endl;
-	else
-		std::cout << "The point is NOT inside the triangle" << std::endl;
-
-	return 0;
-}
-
-

@@ -25,13 +25,11 @@ class Point
 		~Point();
 		Point(const Point& other);
 
-		Point& operator=(const Point& other);
 		const Fixed getX(void) const;
 		const Fixed getY(void) const;
-		void addXAndY(const float x, const float y);
 	private:
-		Fixed _x;
-		Fixed _y;
+		const Fixed _x;
+		const Fixed _y;
 };
 
 std::ostream& operator<<(std::ostream& stream, const Point& point);

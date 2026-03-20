@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME        = bsp
-SRC         = bsp.cpp Fixed.cpp Point.cpp
+SRC         = bsp.cpp main.cpp Fixed.cpp Point.cpp
 OBJ_DIR	    = obj/
 OBJ         = $(patsubst %.cpp, $(OBJ_DIR)%.o, $(SRC))
 
@@ -34,7 +34,7 @@ $(NAME): $(OBJ)
 	@echo "Linking executable..."
 	@$(COMPILER) $(OBJ) -o $@
 	@echo "$(NAME) built!"
-	@ctags -R .
+	-@ctags -R .
 
 $(OBJ_DIR)%.o: %.cpp | $(OBJ_DIR)
 	@echo "Compiling $@..."

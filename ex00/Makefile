@@ -34,7 +34,7 @@ $(NAME): $(OBJ)
 	@echo "Linking executable..."
 	@$(COMPILER) $(OBJ) -o $@
 	@echo "$(NAME) built!"
-	@ctags -R .
+	-@ctags -R .
 
 $(OBJ_DIR)%.o: %.cpp | $(OBJ_DIR)
 	@echo "Compiling $@..."
