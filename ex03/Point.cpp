@@ -26,6 +26,16 @@ Point::Point() : _x(0.0f), _y(0.0f)
 {
 }
 
+
+//its weird, I know, this doens't do anything, but since I have OCF requirements
+//might as well give a error message to the user and not do anything
+Point& Point::operator=(const Point& other)
+{
+	std::cout << "Can't assign since Point's members are const" << std::endl;
+	(void)other;
+	return *this;
+}
+
 Point::~Point()
 {
 }

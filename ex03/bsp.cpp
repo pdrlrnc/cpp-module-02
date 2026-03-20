@@ -27,6 +27,6 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 		- (c.getY().toFloat() - b.getY().toFloat()) * (point.getX().toFloat() - b.getX().toFloat());
 	cAEdge = (a.getX().toFloat() - c.getX().toFloat()) * (point.getY().toFloat() - c.getY().toFloat())
 		- (a.getY().toFloat() - c.getY().toFloat()) * (point.getX().toFloat() - c.getX().toFloat());
-	return ((aBEdge >= 0 && bCEdge >= 0 && cAEdge >= 0) ||
-			(aBEdge <= 0 && bCEdge <= 0 && cAEdge <= 0));
+	return ((aBEdge > 0 && bCEdge > 0 && cAEdge > 0) ||
+			(aBEdge < 0 && bCEdge < 0 && cAEdge < 0));
 }
